@@ -1,0 +1,1568 @@
+@charset "ISO-8859-1";
+
+img{
+
+/* margin-left:50px; */
+
+width:100%;
+
+ 
+
+}
+
+@media screen and (max-width: 500px) {
+
+.navbar a {
+
+float: none;
+
+display: block;
+
+width: 100%;
+
+text-align: left; /* If you want the text to be left-aligned on small screens */
+
+ 
+
+}
+
+.btn {
+
+background-color: DodgerBlue;
+
+border: none;
+
+color: white;
+
+padding: 12px 16px;
+
+font-size: 16px;
+
+cursor: pointer;
+
+}
+
+ 
+
+.btn:hover {
+
+background-color: RoyalBlue;
+
+}
+
+ 
+
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  width: 13.10%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: black;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  width: fit-content;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  /*min-width: 160px;*/
+  width: fit-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: fit-content;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+*,
+
+ 
+
+*::before,
+
+ 
+
+*::after {
+
+ 
+
+box-sizing: border-box;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+body {
+
+ 
+
+margin: 0;
+
+ 
+
+font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+
+ 
+
+background: #ffffff;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.forms-section {
+
+ 
+
+display: flex;
+
+ 
+
+flex-direction: column;
+
+ 
+
+justify-content: center;
+
+ 
+
+align-items: center;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.section-title {
+
+ 
+
+font-size: 32px;
+
+ 
+
+letter-spacing: 1px;
+
+ 
+
+color: #000000;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.forms {
+
+ 
+
+display: flex;
+
+ 
+
+align-items: flex-start;
+
+ 
+
+margin-top: 30px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-wrapper {
+
+ 
+
+animation: hideLayer .3s ease-out forwards;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-wrapper.is-active {
+
+ 
+
+animation: showLayer .3s ease-in forwards;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@keyframes showLayer {
+
+ 
+
+50% {
+
+ 
+
+z-index: 1;
+
+ 
+
+}
+
+ 
+
+100% {
+
+ 
+
+z-index: 1;
+
+ 
+
+}
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@keyframes hideLayer {
+
+ 
+
+0% {
+
+ 
+
+z-index: 1;
+
+ 
+
+}
+
+ 
+
+49.999% {
+
+ 
+
+z-index: 1;
+
+ 
+
+}
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.switcher {
+
+ 
+
+position: relative;
+
+ 
+
+cursor: pointer;
+
+ 
+
+display: block;
+
+ 
+
+margin-right: auto;
+
+ 
+
+margin-left: auto;
+
+ 
+
+padding: 0;
+
+ 
+
+text-transform: uppercase;
+
+ 
+
+font-family: inherit;
+
+ 
+
+font-size: 16px;
+
+ 
+
+letter-spacing: .5px;
+
+ 
+
+color: #000000;
+
+ 
+
+background-color: transparent;
+
+ 
+
+border: none;
+
+ 
+
+outline: none;
+
+ 
+
+transform: translateX(0);
+
+ 
+
+transition: all .3s ease-out;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-wrapper.is-active .switcher-login {
+
+ 
+
+color: #000000;
+
+ 
+
+transform: translateX(90px);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-wrapper.is-active .switcher-signup {
+
+ 
+
+color: #000000;
+
+ 
+
+transform: translateX(-90px);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.underline {
+
+ 
+
+position: absolute;
+
+ 
+
+bottom: -5px;
+
+ 
+
+left: 0;
+
+ 
+
+overflow: hidden;
+
+ 
+
+pointer-events: none;
+
+ 
+
+width: 100%;
+
+ 
+
+height: 2px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.underline::before {
+
+ 
+
+content: '';
+
+ 
+
+position: absolute;
+
+ 
+
+top: 0;
+
+ 
+
+left: inherit;
+
+ 
+
+display: block;
+
+ 
+
+width: inherit;
+
+ 
+
+height: inherit;
+
+ 
+
+background-color: currentColor;
+
+ 
+
+transition: transform .2s ease-out;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.switcher-login .underline::before {
+
+ 
+
+transform: translateX(101%);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.switcher-signup .underline::before {
+
+ 
+
+transform: translateX(-101%);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-wrapper.is-active .underline::before {
+
+ 
+
+transform: translateX(0);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form {
+
+ 
+
+overflow: hidden;
+
+ 
+
+min-width: 260px;
+
+ 
+
+margin-top: 50px;
+
+ 
+
+padding: 30px 25px;
+
+ 
+
+border-radius: 5px;
+
+ 
+
+transform-origin: top;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-login {
+
+ 
+
+animation: hideLogin .3s ease-out forwards;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-wrapper.is-active .form-login {
+
+ 
+
+animation: showLogin .3s ease-in forwards;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@keyframes showLogin {
+
+ 
+
+0% {
+
+ 
+
+background: #d7e7f1;
+
+ 
+
+transform: translate(40%, 10px);
+
+ 
+
+}
+
+ 
+
+50% {
+
+ 
+
+transform: translate(0, 0);
+
+ 
+
+}
+
+ 
+
+100% {
+
+ 
+
+background-color: #fff;
+
+ 
+
+transform: translate(35%, -20px);
+
+ 
+
+}
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@keyframes hideLogin {
+
+ 
+
+0% {
+
+ 
+
+background-color: #fff;
+
+ 
+
+transform: translate(35%, -20px);
+
+ 
+
+}
+
+ 
+
+50% {
+
+ 
+
+transform: translate(0, 0);
+
+ 
+
+}
+
+ 
+
+100% {
+
+ 
+
+background: #d7e7f1;
+
+ 
+
+transform: translate(40%, 10px);
+
+ 
+
+}
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-signup {
+
+ 
+
+animation: hideSignup .3s ease-out forwards;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-wrapper.is-active .form-signup {
+
+ 
+
+animation: showSignup .3s ease-in forwards;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@keyframes showSignup {
+
+ 
+
+0% {
+
+ 
+
+background: #d7e7f1;
+
+ 
+
+transform: translate(-40%, 10px) scaleY(.8);
+
+ 
+
+}
+
+ 
+
+50% {
+
+ 
+
+transform: translate(0, 0) scaleY(.8);
+
+ 
+
+}
+
+ 
+
+100% {
+
+ 
+
+background-color: #fff;
+
+ 
+
+transform: translate(-35%, -20px) scaleY(1);
+
+ 
+
+}
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+@keyframes hideSignup {
+
+ 
+
+0% {
+
+ 
+
+background-color: #fff;
+
+ 
+
+transform: translate(-35%, -20px) scaleY(1);
+
+ 
+
+}
+
+ 
+
+50% {
+
+ 
+
+transform: translate(0, 0) scaleY(.8);
+
+ 
+
+}
+
+ 
+
+100% {
+
+ 
+
+background: #d7e7f1;
+
+ 
+
+transform: translate(-40%, 10px) scaleY(.8);
+
+ 
+
+}
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form fieldset {
+
+ 
+
+position: relative;
+
+ 
+
+opacity: 0;
+
+ 
+
+margin: 0;
+
+ 
+
+padding: 0;
+
+ 
+
+border: 0;
+
+ 
+
+transition: all .3s ease-out;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-login fieldset {
+
+ 
+
+transform: translateX(-50%);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-signup fieldset {
+
+ 
+
+transform: translateX(50%);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-wrapper.is-active fieldset {
+
+ 
+
+opacity: 1;
+
+ 
+
+transform: translateX(0);
+
+ 
+
+transition: opacity .4s ease-in, transform .35s ease-in;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form legend {
+
+ 
+
+position: absolute;
+
+ 
+
+overflow: hidden;
+
+ 
+
+width: 1px;
+
+ 
+
+height: 1px;
+
+ 
+
+clip: rect(0 0 0 0);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.input-block {
+
+ 
+
+margin-bottom: 20px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.input-block label {
+
+ 
+
+font-size: 14px;
+
+ 
+
+color: #a1b4b4;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.input-block input {
+
+ 
+
+display: block;
+
+ 
+
+width: 100%;
+
+ 
+
+margin-top: 8px;
+
+ 
+
+padding-right: 15px;
+
+ 
+
+padding-left: 15px;
+
+ 
+
+font-size: 16px;
+
+ 
+
+line-height: 40px;
+
+ 
+
+color: #3b4465;
+
+ 
+
+background: #eef9fe;
+
+ 
+
+border: 1px solid #cddbef;
+
+ 
+
+border-radius: 2px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form [type='submit'] {
+
+ 
+
+opacity: 0;
+
+ 
+
+display: block;
+
+ 
+
+min-width: 120px;
+
+ 
+
+margin: 30px auto 10px;
+
+ 
+
+font-size: 18px;
+
+ 
+
+line-height: 40px;
+
+ 
+
+border-radius: 25px;
+
+ 
+
+border: none;
+
+ 
+
+transition: all .3s ease-out;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.form-wrapper.is-active .form [type='submit'] {
+
+ 
+
+opacity: 1;
+
+ 
+
+transform: translateX(0);
+
+ 
+
+transition: all .4s ease-in;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btn-login {
+
+ 
+
+color: #fbfdff;
+
+ 
+
+background: #a7e245;
+
+ 
+
+transform: translateX(-30%);
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+.btn-signup {
+
+ 
+
+color: #a7e245;
+
+ 
+
+background: #fbfdff;
+
+ 
+
+box-shadow: inset 0 0 0 2px #a7e245;
+
+ 
+
+transform: translateX(30%);
+
+ 
+
+}
+
+ 
+
+* {
+
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
+}
+
+ 
+
+:root {
+
+--secondary-color: #151226;
+
+--contrast-color: #BF307F;
+
+}
+
+.overlay {
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+right: 0;
+
+bottom: 0;
+
+height: 100%;
+
+z-index: -10;
+
+background-color: var(--contrast-color);
+
+}
+
+ 
+
+.container {
+
+display: flex;
+
+height: 100vh;
+
+justify-content: space-around;
+
+align-items: center;
+
+color: #fff;
+
+animation: expand .8s ease forwards;
+
+background-color: var(--secondary-color);
+
+position: relative;
+
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+transition: all .8s ease;
+
+}
+
+ 
+
+.container_content {
+
+width: 50%;
+
+}
+
+ 
+
+.container_content_inner {
+
+width: 80%;
+
+margin-left: 80px;
+
+}
+
+ 
+
+.container_outer_img {
+
+margin: 50px;
+
+width: 50%;
+
+overflow: hidden;
+
+}
+
+ 
+
+.container_img {
+
+width: 100%;
+
+animation: slideIn 2.5s ease-in-out forwards;
+
+}
+
+ 
+
+.par {
+
+height: auto;
+
+overflow: hidden;
+
+}
+
+ 
+
+p{
+
+line-height: 28px;
+
+transform: translateY(300px);
+
+animation: slideUp 1.2s ease-in-out forwards 1.2s;
+
+}
+
+ 
+
+.btns {
+
+height: 100%;
+
+position: relative;
+
+width: 150px;
+
+overflow: hidden;
+
+}
+
+ 
+
+.btns_more {
+
+background: transparent;
+
+border: 1px solid var(--contrast-color);
+
+border-radius: 50px;
+
+padding: 8px 12px;
+
+color: #BF307F;
+
+font-size: 16px;
+
+text-transform: uppercase;
+
+position: relative;
+
+margin-top: 15px;
+
+outline: none;
+
+transform: translateY(50px);
+
+animation: slideUp 1.2 ease-in-out forwards 1.4s;
+
+}
+
+ 
+
+.title {
+
+overflow: hidden;
+
+height: auto;
+
+}
+
+ 
+
+h1 {
+
+font-size: 40px;
+
+color: var(--contrast-color);
+
+margin-bottom: 20px;
+
+transform: translateY(100px);
+
+animation: slideUp 1.2s ease forwards .9s;
+
+}
+
+ 
+
+@keyframes slideIn {
+
+0% {
+
+transform: translateX(500px) scale(.2);
+
+}
+
+100% {
+
+transform: translateX(0px) scale(1);
+
+}
+
+}
+
+ 
+
+@keyframes slideUp {
+
+0% {
+
+transform: translateY(300px);
+
+}
+
+100% {
+
+transform: translateY(0px);
+
+}
+
+}
+
+ 
+
+@keyframes expand {
+
+0% {
+
+transform: translateX(1400px);
+
+}
+
+100% {
+
+transform: translateX(0px);
+
+}
+
+}
